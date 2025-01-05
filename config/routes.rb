@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "sign_up", to: "registrations#new"
+  post "user", to: "registrations#create"
   resource :session
   resources :passwords, param: :token
   resources :products do
